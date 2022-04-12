@@ -26,7 +26,7 @@
     <div id="app">
 
       <div v-if="showBooks">
-        <p> {{title}} - {{author}} - {{age}} </p>
+        <p> {{ title }} - {{ author }} - {{ age }} </p>
       </div>
 
       <button @click="toggleShowBooks">
@@ -37,9 +37,9 @@
       <br>
       <!-- MOUSE EVENTS -->
 
-    <div class="box" @mouseover="">Mouseover(enter)</div>
-    <div class="box">mouseleave</div>
-    <div class="box">doubleclick</div>
+    <div class="box" @mouseover="handleEvent">Mouseover(enter)</div>
+    <div class="box" @mouseleave="handleEvent">mouseleave</div>
+    <div class="box" @dblclick="handleEvent">doubleclick</div>
     <div class="box"></div>
     
     </div>
