@@ -23,10 +23,17 @@
 
   <body>
 
+
+    <h1>Hello, Vue :)</h1>
     <div id="app">
 
       <div v-if="showBooks">
-        <p> {{ title }} - {{ author }} - {{ age }} </p>
+        <ul>
+          <li v-for="book in books">
+            <h3> {{book.title}} </h3>
+            <p> {{book.author}} </p>
+          </li>
+        </ul>
       </div>
 
       <button @click="toggleShowBooks">
@@ -35,12 +42,16 @@
       </button>
 
       <br>
+
+      <!-- OUTPUTING LISTS -->
+
+
       <!-- MOUSE EVENTS -->
 
-    <div class="box" @mouseover="handleEvent($event, 5)">Mouseover(enter)</div>
+    <!-- <div class="box" @mouseover="handleEvent($event, 5)">Mouseover(enter)</div>
     <div class="box" @mouseleave="handleEvent">mouseleave</div>
     <div class="box" @dblclick="handleEvent">doubleclick</div>
-    <div class="box" @mousemove="handleMouseMove">Position - {{x}} - {{y}} </div>
+    <div class="box" @mousemove="handleMouseMove">Position - {{x}} - {{y}} </div> -->
     
     </div>
 
