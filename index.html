@@ -9,41 +9,47 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+
+  <style>
+    .box{
+      padding: 100px 0;
+      width: 400px;
+      text-align: center;
+      background-color: #ddd;
+      margin: 20px;
+      display: inline-block;
+    }
+  </style>
+
   <body>
+
+    <div id="app">
+
+      <div v-if="showBooks">
+        <p> {{title}} - {{author}} - {{age}} </p>
+      </div>
+
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide books</span>
+        <span v-else>Show books</span>
+      </button>
+
+      <br>
+      <!-- MOUSE EVENTS -->
+
+    <div class="box" @mouseover="">Mouseover(enter)</div>
+    <div class="box">mouseleave</div>
+    <div class="box">doubleclick</div>
+    <div class="box"></div>
     
+    </div>
+
       
   
     	
     <script src="https://unpkg.com/vue@3"></script>
-    <div id="app">
-      <button @click="count++">
-        Count is: {{ count }}
-      </button>
-    </div>
-        <script>
-          import { createApp } from 'vue'
+    <script src="/index.js"></script>
 
-createApp({
-  data() {
-    return {
-      count: 0
-    }
-  }
-}).mount('#app')
-        </script>
-
-
-<!-- <div id="app">{{ message }}</div>
-
-<script>
-  Vue.createApp({
-    data() {
-      return {
-        message: 'Hello Vue!'
-      }
-    }
-  }).mount('#app')
-</script> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
